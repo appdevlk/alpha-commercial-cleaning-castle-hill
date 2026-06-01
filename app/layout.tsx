@@ -4,6 +4,23 @@ import './globals.css';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+// Polyfill localStorage for SSR. Always override — Node 22 with the
+// --localstorage-file flag provides a broken stub that lacks getItem etc.
+if (typeof window === 'undefined') {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (global as any).localStorage = {
+    getItem: () => null,
+    setItem: () => { },
+    removeItem: () => { },
+    clear: () => { },
+    length: 0,
+    key: () => null,
+  };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (global as any).sessionStorage = (global as any).localStorage;
+}
+
 const redHatDisplay = Red_Hat_Display({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
