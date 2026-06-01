@@ -64,10 +64,8 @@ export default function ContactForm() {
         });
       } else {
         setSubmitStatus("error");
-        console.error("API Error:", result.message);
       }
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
