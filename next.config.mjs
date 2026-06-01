@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  compiler: {
+    removeConsole: true,
+  },
 };
 
 export default nextConfig;

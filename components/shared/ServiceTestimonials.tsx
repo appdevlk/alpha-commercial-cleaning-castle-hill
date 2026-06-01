@@ -261,6 +261,7 @@ export default function ServiceTestimonials({
                   {/* Customer Info */}
                   <div className="flex items-center gap-3 mt-auto">
                     <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-gray-100 flex-shrink-0 bg-gray-200">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.name}
