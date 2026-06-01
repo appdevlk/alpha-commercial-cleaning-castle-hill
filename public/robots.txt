@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://alpha-commercial-cleaning-parramatta.com.au/
+
+# Sitemaps
+Sitemap: http://alpha-commercial-cleaning-parramatta.com.au/sitemap.xml

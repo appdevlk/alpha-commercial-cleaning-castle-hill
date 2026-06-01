@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: theme("colors.primary.DEFAULT");
+  --text-color: theme("colors.text.DEFAULT");
+  --background-color: #ffffff;
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply text-text bg-white font-normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  p {
+    @apply font-normal;
+  }
+}
+
+main {
+  min-height: calc(100vh - 72px); /* Adjust based on header height */
+}
